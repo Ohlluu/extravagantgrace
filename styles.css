@@ -873,7 +873,11 @@ blockquote em { color: var(--gold); font-style: normal; }
   overflow: hidden;
   height: 640px;
   background: var(--black);
+  scrollbar-width: none;
 }
+.phone-screen::-webkit-scrollbar { display: none; }
+.phone-screen iframe { scrollbar-width: none; }
+.phone-screen iframe::-webkit-scrollbar { display: none; }
 .phone-screen .fb-page,
 .phone-screen .fb-page span,
 .phone-screen .fb-page iframe {
