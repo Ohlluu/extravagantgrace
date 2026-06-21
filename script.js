@@ -99,56 +99,45 @@ function revealHero() {
   io.observe(el);
 })();
 
-/* ── Testimonials Slider ── */
+/* ── Testimonials ── */
 (function () {
-  const track  = document.getElementById('testiTrack');
-  const dotsWrap = document.getElementById('testiDots');
-  const prevBtn = document.getElementById('tPrev');
-  const nextBtn = document.getElementById('tNext');
-  if (!track) return;
+  const quotes = [
+    { text: "She turned my daughter's sweet sixteen into something straight out of a fairy tale. Every single detail was perfect. I didn't have to worry about a single thing.", name: "Toyin M.", event: "Sweet Sixteen — Houston, TX" },
+    { text: "Our wedding was everything we dreamed of and more. Extravagant Grace handled everything with such professionalism and elegance. Our guests are still talking about it.", name: "Amara & Chidi", event: "Wedding — Houston, TX" },
+    { text: "I've worked with event planners before, but nothing compares to this level of dedication. Extravagant isn't just a name — it is a promise she keeps every single time.", name: "Rhonda O.", event: "Corporate Gala — Houston, TX" },
+    { text: "My baby shower was absolutely stunning. The décor, the flow, the food — everything was seamless. I felt like royalty on my special day.", name: "Ngozi B.", event: "Baby Shower — Katy, TX" },
+    { text: "She understood my vision even before I could fully articulate it. The event felt deeply personal and utterly luxurious at the same time. Extraordinary woman.", name: "Fatima K.", event: "Anniversary Dinner — Houston, TX" },
+  ];
 
-  const cards = Array.from(track.querySelectorAll('.testi-card'));
+  const quoteEl = document.getElementById('testiQuote');
+  const nameEl  = document.getElementById('testiName');
+  const eventEl = document.getElementById('testiEvent');
+  const thumbs  = document.querySelectorAll('.testi-thumb');
+  if (!quoteEl) return;
+
   let current = 0;
   let timer;
 
-  function buildDots() {
-    dotsWrap.innerHTML = '';
-    cards.forEach((_, i) => {
-      const b = document.createElement('button');
-      b.className = 't-dot' + (i === current ? ' active' : '');
-      b.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(b);
-    });
-  }
-
   function goTo(idx) {
-    cards[current].classList.remove('active');
-    dotsWrap.querySelectorAll('.t-dot')[current]?.classList.remove('active');
-    current = (idx + cards.length) % cards.length;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    cards[current].classList.add('active');
-    dotsWrap.querySelectorAll('.t-dot')[current]?.classList.add('active');
-    resetTimer();
-  }
+    thumbs[current].classList.remove('active');
+    current = (idx + quotes.length) % quotes.length;
 
-  function resetTimer() {
+    quoteEl.classList.add('switching');
+    setTimeout(() => {
+      quoteEl.textContent = quotes[current].text;
+      nameEl.textContent  = quotes[current].name;
+      eventEl.textContent = quotes[current].event;
+      quoteEl.classList.remove('switching');
+    }, 350);
+
+    thumbs[current].classList.add('active');
     clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), 6000);
+    timer = setInterval(() => goTo(current + 1), 7000);
   }
 
-  prevBtn?.addEventListener('click', () => goTo(current - 1));
-  nextBtn?.addEventListener('click', () => goTo(current + 1));
+  thumbs.forEach(t => t.addEventListener('click', () => goTo(parseInt(t.dataset.index))));
 
-  // Swipe
-  let sx = 0;
-  track.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
-  track.addEventListener('touchend', e => {
-    const diff = sx - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
-  });
-
-  buildDots();
-  goTo(0);
+  timer = setInterval(() => goTo(current + 1), 7000);
 })();
 
 /* ── Parallax Hero Image ── */
