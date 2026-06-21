@@ -881,14 +881,11 @@ blockquote em { color: var(--gold); font-style: normal; }
   content: '';
   position: absolute;
   top: 0; right: 0;
-  width: 16px;
+  width: 18px;
   height: 100%;
   background: var(--black);
   z-index: 10;
   pointer-events: none;
-}
-.phone-screen .fb-page {
-  margin-left: -8px;
 }
 
 .phone-screen .fb-page,
