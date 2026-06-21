@@ -32,18 +32,25 @@ window.addEventListener('load', () => {
 /* ── Mobile Nav ── */
 (function () {
   const toggle = document.getElementById('navToggle');
-  const links  = document.getElementById('navLinks');
-  if (!toggle) return;
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('open');
-    links.classList.toggle('open');
-    document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  const menu   = document.getElementById('mobileMenu');
+  if (!toggle || !menu) return;
+
+  function openMenu() {
+    toggle.classList.add('open');
+    menu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
     toggle.classList.remove('open');
-    links.classList.remove('open');
+    menu.classList.remove('open');
     document.body.style.overflow = '';
-  }));
+  }
+
+  toggle.addEventListener('click', () => {
+    menu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 })();
 
 /* ── Hero Reveal ── */
