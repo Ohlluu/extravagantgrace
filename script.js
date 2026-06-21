@@ -10,44 +10,6 @@ window.addEventListener('load', () => {
   }, 1800);
 });
 
-/* ── Custom Cursor ── */
-(function () {
-  const dot  = document.getElementById('cursor-dot');
-  const ring = document.getElementById('cursor-ring');
-  if (!dot || !ring) return;
-
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  const hoverEls = document.querySelectorAll('a, button, .service-row, .gal-item, .contact-method, .pillar');
-  hoverEls.forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
-
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity = '0'; ring.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity = '1'; ring.style.opacity = '1';
-  });
-})();
 
 /* ── Navbar Scroll ── */
 (function () {
