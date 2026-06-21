@@ -474,21 +474,10 @@ section { position: relative; z-index: 1; }
 .about-img-bg {
   width: 100%;
   height: 560px;
-  background: linear-gradient(145deg, var(--burgundy) 0%, #2D0812 40%, #0D050A 100%);
+  background: url('owner.jpg') center top / cover no-repeat;
   border-radius: 2px;
   position: relative;
   overflow: hidden;
-}
-.about-img-bg::after {
-  content: 'EG';
-  position: absolute;
-  bottom: -2rem;
-  right: -2rem;
-  font-family: var(--ff-display);
-  font-size: 12rem;
-  font-weight: 700;
-  color: rgba(201,168,76,0.06);
-  line-height: 1;
 }
 .about-img-frame {
   position: absolute;
