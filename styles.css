@@ -877,16 +877,6 @@ blockquote em { color: var(--gold); font-style: normal; }
   scrollbar-width: none;
 }
 .phone-screen::-webkit-scrollbar { display: none; }
-.phone-screen::after {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 18px;
-  height: 100%;
-  background: var(--black);
-  z-index: 10;
-  pointer-events: none;
-}
 
 .phone-screen .fb-page,
 .phone-screen .fb-page span,
