@@ -454,7 +454,7 @@ section { position: relative; z-index: 1; }
 
 /* ── About ── */
 .about {
-  padding: 10rem 0 8rem;
+  padding: 10rem 0 4rem;
   background: var(--dark);
   overflow: hidden;
 }
@@ -551,7 +551,7 @@ section { position: relative; z-index: 1; }
 
 /* ── Services ── */
 .services {
-  padding: 10rem 0;
+  padding: 4rem 0 10rem;
   background: var(--black);
   overflow: hidden;
 }
