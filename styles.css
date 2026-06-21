@@ -875,10 +875,21 @@ blockquote em { color: var(--gold); font-style: normal; }
   background: var(--black);
   position: relative;
   scrollbar-width: none;
-  box-shadow: inset -18px 0 0 0 var(--black);
 }
 .phone-screen::-webkit-scrollbar { display: none; }
-/* inset shadow covers only the scrollbar on the right, left side untouched */
+.phone-screen::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 16px;
+  height: 100%;
+  background: var(--black);
+  z-index: 10;
+  pointer-events: none;
+}
+.phone-screen .fb-page {
+  margin-left: -8px;
+}
 
 .phone-screen .fb-page,
 .phone-screen .fb-page span,
