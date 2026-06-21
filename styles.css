@@ -223,18 +223,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gold);
   display: block;
 }
-.hero-headline { line-height: 0.95; }
-.h-line { overflow: hidden; display: block; padding: 0.1em 0; }
-.h-line:first-child { padding: 0.6em 0 0.5em; }
+.hero-headline { line-height: 1.05; }
+.h-line { display: block; padding: 0; overflow: visible; }
 .h-mask {
   display: inline-block;
-  transform: translateY(120%);
   opacity: 0;
+  transform: translateY(24px);
 }
-.h-mask.revealed { transform: translateY(0); opacity: 1; transition: transform 1.2s var(--ease), opacity 0.8s; }
+.h-mask.revealed { opacity: 1; transform: translateY(0); transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .h-mask.revealed.d1 { transition-delay: 0.1s; }
-.h-mask.revealed.d2 { transition-delay: 0.25s; }
-.h-mask.revealed.d3 { transition-delay: 0.4s; }
+.h-mask.revealed.d2 { transition-delay: 0.28s; }
+.h-mask.revealed.d3 { transition-delay: 0.46s; }
 .script-word {
   font-family: var(--ff-script);
   font-size: clamp(4rem, 10vw, 10rem);
