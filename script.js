@@ -1,5 +1,5 @@
 /* =====================================================
-   EXTRAVAGANT GRACE EVENTS — script.js (Luxury Edition)
+   EXTRAVAGANT GRACE EVENTS, script.js (Luxury Edition)
    ===================================================== */
 
 /* ── Preloader ── */
@@ -102,11 +102,11 @@ function revealHero() {
 /* ── Testimonials ── */
 (function () {
   const quotes = [
-    { text: "She turned my daughter's sweet sixteen into something straight out of a fairy tale. Every single detail was perfect. I didn't have to worry about a single thing.", name: "Toyin M.", event: "Sweet Sixteen — Houston, TX" },
-    { text: "Our wedding was everything we dreamed of and more. Extravagant Grace handled everything with such professionalism and elegance. Our guests are still talking about it.", name: "Amara & Chidi", event: "Wedding — Houston, TX" },
-    { text: "I've worked with event planners before, but nothing compares to this level of dedication. Extravagant isn't just a name — it is a promise she keeps every single time.", name: "Rhonda O.", event: "Corporate Gala — Houston, TX" },
-    { text: "My baby shower was absolutely stunning. The décor, the flow, the food — everything was seamless. I felt like royalty on my special day.", name: "Ngozi B.", event: "Baby Shower — Katy, TX" },
-    { text: "She understood my vision even before I could fully articulate it. The event felt deeply personal and utterly luxurious at the same time. Extraordinary woman.", name: "Fatima K.", event: "Anniversary Dinner — Houston, TX" },
+    { text: "She turned my daughter's sweet sixteen into something straight out of a fairy tale. Every single detail was perfect. I didn't have to worry about a single thing.", name: "Toyin M.", event: "Sweet Sixteen, Houston, TX" },
+    { text: "Our wedding was everything we dreamed of and more. Extravagant Grace handled everything with such professionalism and elegance. Our guests are still talking about it.", name: "Amara & Chidi", event: "Wedding, Houston, TX" },
+    { text: "I've worked with event planners before, but nothing compares to this level of dedication. Extravagant isn't just a name, it is a promise she keeps every single time.", name: "Rhonda O.", event: "Corporate Gala, Houston, TX" },
+    { text: "My baby shower was absolutely stunning. The décor, the flow, the food, everything was seamless. I felt like royalty on my special day.", name: "Ngozi B.", event: "Baby Shower, Katy, TX" },
+    { text: "She understood my vision even before I could fully articulate it. The event felt deeply personal and utterly luxurious at the same time. Extraordinary woman.", name: "Fatima K.", event: "Anniversary Dinner, Houston, TX" },
   ];
 
   const quoteEl = document.getElementById('testiQuote');
