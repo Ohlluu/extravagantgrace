@@ -551,7 +551,7 @@ section { position: relative; z-index: 1; }
 
 /* ── Services ── */
 .services {
-  padding: 4rem 0 10rem;
+  padding: 4rem 0 6rem;
   background: var(--black);
   overflow: hidden;
 }
@@ -721,7 +721,7 @@ section { position: relative; z-index: 1; }
 /* ── Quote Break ── */
 .quote-break {
   position: relative;
-  padding: 8rem 4rem;
+  padding: 5rem 4rem;
   overflow: hidden;
   z-index: 1;
   text-align: center;
@@ -765,7 +765,7 @@ blockquote em { color: var(--gold); font-style: normal; }
 
 /* ── Gallery ── */
 .gallery {
-  padding: 10rem 0 6rem;
+  padding: 4rem 0 4rem;
   background: var(--dark);
   overflow: hidden;
 }
@@ -832,7 +832,7 @@ blockquote em { color: var(--gold); font-style: normal; }
 
 /* ── Testimonials ── */
 .testimonials {
-  padding: 10rem 0;
+  padding: 4rem 0 6rem;
   background: var(--black);
   overflow: hidden;
   position: relative;
@@ -982,7 +982,7 @@ blockquote em { color: var(--gold); font-style: normal; }
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 8rem 4rem;
+  padding: 5rem 4rem;
   width: 100%;
 }
 .contact-heading {
